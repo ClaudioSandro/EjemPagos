@@ -1,7 +1,7 @@
 #include "pch.h"
 #include <iostream>
 #include "Usuario.h"
-//Acabo de borrar los comentarios
+//A mimir
 
 using namespace std;
 using namespace System;

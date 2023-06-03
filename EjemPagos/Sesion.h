@@ -64,20 +64,21 @@ void Sesion::pagar() {
 
 int Sesion::tipoPago() {
     int op;
-    cout << "Que metodo de pago usara?" << endl;
+    cout << "Que metodo de pago usara?" << endl << endl;
     cout << "1. Visa" << endl;
     cout << "2. MasterCard" << endl;
     cout << "3. AmericanExpress" << endl;
-    cout << "4. DinersClub" << endl;
+    cout << "4. DinersClub" << endl << endl;
     cout << "Opcion: "; cin >> op; cout << endl;
     return op;
 }
 
 int Sesion::opcionesPago() {
     int op;
-    cout << "Cuando desea realizar el pago de su boleta?" << endl;
+    cout << "Cuando desea realizar el pago de su boleta?" << endl << endl;
     cout << "1. Cancelar mediante la aplicacion (tarjeta)" << endl;
-    cout << "2. Cancelar presencialmente" << endl;
+    cout << "2. Cancelar presencialmente" << endl << endl;
     cout << "Opcion: "; cin >> op; cout << endl;
+    system("cls");
     return op;
 }

@@ -58,7 +58,7 @@ public:
 
 			return false;
 		}
-		
+
 	}
 };
 
@@ -115,7 +115,6 @@ public:
 			cout << "La tarjeta ingresada no es DinersClub" << endl;
 			cout << "Tipo de tarjeta ingresada: " << x.empresa << endl << endl;
 			SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-			cout << "Presione Enter para continuar...";
 
 			return false;
 		}

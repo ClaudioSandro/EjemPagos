@@ -35,14 +35,15 @@ tarjeta CuentaBancaria::nuevaTarjeta() {
 	tarjeta aux;
 	int op_metodo;
 
-	cout << "Ingresar nueva tarjeta: " << endl << endl;
+	cout << "INGRESAR TARJETA " << endl << endl;
+	cout << "Seleccione la empresa de su tarjeta: " << endl << endl;
 
 	cout << "1.Visa" << endl;
 	cout << "2.MasterCard" << endl;
 	cout << "3.AmericanExpress" << endl;
 	cout << "4.DinersClub" << endl << endl;
 
-	cout << "Seleccione el tipo de la tarjeta: "; cin >> op_metodo; cout << endl;
+	cout << "Opcion: "; cin >> op_metodo; cout << endl;
 	switch (op_metodo)
 	{
 	case 1: aux.empresa = "Visa"; break;
@@ -50,7 +51,9 @@ tarjeta CuentaBancaria::nuevaTarjeta() {
 	case 3: aux.empresa = "AmericanExpress"; break;
 	case 4: aux.empresa = "DinersClub"; break;
 	}
+	system("cls");
 
+	cout << "INGRESAR TARJETA " << endl << endl;
 	cout << "Tipo: " << aux.empresa << endl;
 	cout << "Numero de Tarjeta: "; cin >> aux.numero;
 	cout << "Titular: "; cin >> aux.titular;
@@ -129,12 +132,20 @@ int CuentaBancaria::opcionPago(tarjeta metodo) {
 	int op;
 	cout << "Desea usar la tarjeta guardada en su cuenta? Si(1) No(2)"; cin >> op; cout << endl;
 	if (op == 1 && metodo.empresa == " ") { //Si no hay tarjeta guardada
-		cout << "No existe tarjeta guardada... Redireccionado a ingreso de tarjeta..." << endl << endl;
+		cout << "No existe tarjeta guardada... Redireccionado a ingreso de tarjeta..." << endl;
+
+		//Pausar el programa hasta que se presione enter
+		cout << "Presione Enter para continuar...";
+		cin.ignore(); cin.get();
+		system("cls");
+
 		return 2; // Devuelve como si quisiera usar la guardada
 	}
 	else if (op == 2) { //Si no quiere usar tarjeta guardada
+		system("cls");
 		return 2;
 	}else
+		system("cls");
 		return 1; // Si quiere usar tarjeta guardada
 	
 }

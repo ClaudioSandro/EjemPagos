@@ -25,7 +25,8 @@ bool MetodoPagos::validar(string tipo, tarjeta x) {
 		return (tarj.validar(tipo, x));
 	}
 	if (tipo == "DinersClub") {
-		AmericanExpress tarj;
+		DinersClub tarj;
 		return (tarj.validar(tipo, x));
 	}
+	
 }

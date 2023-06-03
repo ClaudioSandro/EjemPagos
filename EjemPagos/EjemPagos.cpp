@@ -3,6 +3,8 @@
 #include "Usuario.h"
 //te funciono el git? si o no?
 //sandro: si
+//Francesco: si
+
 using namespace std;
 using namespace System;
 

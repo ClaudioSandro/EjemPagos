@@ -4,7 +4,7 @@
 #include "Usuario.h"
 
 
-class Cuenta {
+class CuentaBancaria {
 private:
 	bool pagoRealizado = false;
 public:
@@ -18,7 +18,7 @@ public:
 	tarjeta pagar(string tipo, tarjeta metodo);
 };
 
-void Cuenta::mostrarTarjeta(tarjeta metodo) {
+void CuentaBancaria::mostrarTarjeta(tarjeta metodo) {
 
 	cout << "Tipo: " << metodo.empresa << endl;
 	cout << "Numero de Tarjeta: " << metodo.numero << endl;
@@ -28,7 +28,7 @@ void Cuenta::mostrarTarjeta(tarjeta metodo) {
 
 }
 
-tarjeta Cuenta::ingresarDatos(string tipo, tarjeta metodo) {
+tarjeta CuentaBancaria::ingresarDatos(string tipo, tarjeta metodo) {
 	tarjeta aux;
 	MetodoPagos pago;
 	
@@ -75,10 +75,10 @@ tarjeta Cuenta::ingresarDatos(string tipo, tarjeta metodo) {
 	
 };
 
-int Cuenta::opcionPago(tarjeta metodo) {
+int CuentaBancaria::opcionPago(tarjeta metodo) {
 	int op;
 	cout << "Desea usar la tarjeta guardada en su cuenta? Si(1) No(2)"; cin >> op; cout << endl;
-	if (op == 1 && metodo.codigo == " ") { //Si no hay tarjeta guardada
+	if (op == 1 && metodo.empresa == " ") { //Si no hay tarjeta guardada
 		cout << "No existe tarjeta guardada... Redireccionado a ingreso de tarjeta..." << endl << endl;
 		return 2; // Devuelve como si quisiera usar la guardada
 	}
@@ -89,7 +89,7 @@ int Cuenta::opcionPago(tarjeta metodo) {
 	
 }
 
-tarjeta Cuenta::pagar(string tipo, tarjeta metodo) {
+tarjeta CuentaBancaria::pagar(string tipo, tarjeta metodo) {
 	
 	tarjeta aux;
 

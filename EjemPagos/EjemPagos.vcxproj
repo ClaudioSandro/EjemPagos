@@ -127,11 +127,13 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cliente.h" />
+    <ClInclude Include="Sesion.h" />
     <ClInclude Include="Usuario.h" />
     <ClInclude Include="Tarjetas.h" />
     <ClInclude Include="Recursos.h" />
     <ClInclude Include="MetodoPagos.h" />
-    <ClInclude Include="Cuenta.h" />
+    <ClInclude Include="CuentaBancaria.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
   </ItemGroup>

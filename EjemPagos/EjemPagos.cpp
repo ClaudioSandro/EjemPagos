@@ -1,9 +1,7 @@
 #include "pch.h"
 #include <iostream>
 #include "Usuario.h"
-//te funciono el git? si o no?
-//sandro: si
-//Francesco: si
+//Acabo de borrar los comentarios
 
 using namespace std;
 using namespace System;

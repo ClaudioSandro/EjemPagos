@@ -23,6 +23,7 @@ public:
 
 void CuentaBancaria::mostrarTarjeta(tarjeta metodo) {
 
+	cout << "TARJETA DE LA CUENTA" << endl << endl;
 	cout << "Tipo: " << metodo.empresa << endl;
 	cout << "Numero de Tarjeta: " << metodo.numero << endl;
 	cout << "Titular: " << metodo.titular << endl;

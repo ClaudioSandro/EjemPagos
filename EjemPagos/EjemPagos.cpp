@@ -7,7 +7,9 @@ int main()
 {
     Sesion sistema;
    
-    sistema.sistemaPagos();
+    do {
+        sistema.menuPrincipal();
+    } while (true);
     
     return 0;
 }

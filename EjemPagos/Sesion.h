@@ -151,8 +151,23 @@ void Sesion::pagar() {
         if (repetir) pagar();
     }
     else if (op == 2){
-        //Set en la boleta -> Estado de pago: Se realizara durante entrega
-        cout << "El pago se relizara de forma presencial..." << endl << endl;
+        int op_entrega;
+        cout << "Esta seguro que desea cancelar durante su entrega?" << endl << endl;
+        cout << "1.Si, deseo pagar durante la entrega (presencial)" << endl;
+        cout << "2.Volver" << endl << endl;
+        cout << "Opcion: "; cin >> op_entrega; cout << endl;
+
+        if (op_entrega == 1) {
+            cout << "El pago se relizara durante la entrega... Presione Enter para continuar" << endl << endl;
+            //Set en la boleta -> Estado de pago: Se realizara durante entrega
+            cin.ignore(); cin.get();
+            system("cls");
+        }
+        else {
+            system("cls");
+            pagar();
+        }
+        
     }
     else if (op == 3) {
         system("cls");

@@ -20,7 +20,7 @@ public:
 	void iniciarSesion();
     void menuPrincipal();
     void sistemaPagos();
-
+ 
 };
 
 void Sesion::iniciarSesion() {

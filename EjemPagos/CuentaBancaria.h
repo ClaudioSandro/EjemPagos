@@ -26,6 +26,7 @@ void CuentaBancaria::mostrarTarjeta(tarjeta metodo) {
 	cout << "TARJETA DE LA CUENTA" << endl << endl;
 	cout << "Tipo: " << metodo.empresa << endl;
 	cout << "Numero de Tarjeta: " << metodo.numero << endl;
+	cout << "Fecha de Vencimiento: " << metodo.vencimiento << endl;
 	cout << "Titular: " << metodo.titular << endl;
 	cout << "Codigo: " << metodo.codigo << endl;
 	cout << endl;
@@ -34,6 +35,7 @@ void CuentaBancaria::mostrarTarjeta(tarjeta metodo) {
 
 tarjeta CuentaBancaria::nuevaTarjeta() {
 	tarjeta aux;
+	unsigned int mes, ano;
 	int op_metodo;
 
 	cout << "INGRESAR TARJETA " << endl << endl;
@@ -57,6 +59,27 @@ tarjeta CuentaBancaria::nuevaTarjeta() {
 	cout << "INGRESAR TARJETA " << endl << endl;
 	cout << "Tipo: " << aux.empresa << endl;
 	cout << "Numero de Tarjeta: "; cin >> aux.numero;
+	cout << "Fecha de Vecimiento: " << endl; 
+	do  {
+		cout << "Mes: "; cin >> mes;
+		cout << "Ano: "; cin >> ano;
+		if (mes > 12) cout << "El mes ingresado es invalido..." << endl;
+		if (ano < 1900 || ano > 2050) {
+			cout << "El ano ingresado es invalido..." << endl;
+		}else if (ano == 2023 && mes < 7 || ano < 2023){
+			cout << "La tarjeta esta vencida... Vuelva a ingresar los datos (ENTER)";
+			cin.ignore(); cin.get();
+			system("cls");
+			nuevaTarjeta();
+		}
+	} while (mes > 12 || ano < 2022 || ano > 2050);
+	aux.vencimiento = to_string(mes) + "\\" + to_string(ano);
+	system("cls");
+
+	cout << "INGRESAR TARJETA " << endl << endl;
+	cout << "Tipo: " << aux.empresa << endl;
+	cout << "Numero de Tarjeta: " << aux.numero << endl;
+	cout << "Fecha de Vecimiento: " << aux.vencimiento << endl;
 	cout << "Titular: "; cin >> aux.titular;
 	cout << "Codigo: "; cin >> aux.codigo;
 	cout << endl;

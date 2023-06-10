@@ -4,17 +4,18 @@
 
 class SistemaPagos {
     
+private:
+    bool pagoTarjeta(Cliente x);
+    
+    int opcionesPago();
+    int tipoPago();
+
 public:
 
     void pagar(Cliente &x);
     void mostrarTarjeta(Cliente &x);
     void eliminarTarjeta(Cliente &x);
-
-    bool pagoTarjeta(Cliente x);
     int menuPagos();
-    int opcionesPago();
-    int tipoPago();
-
 };
 
 void SistemaPagos::pagar(Cliente &x) {

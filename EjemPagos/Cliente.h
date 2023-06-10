@@ -8,7 +8,7 @@ private:
 	tarjeta metodo;
 
 public:
-	Cliente() { metodo.codigo = " "; metodo.numero = " "; metodo.titular = " "; metodo.empresa = " "; }
+	Cliente() { metodo.codigo = " "; metodo.numero = " "; metodo.titular = " "; metodo.empresa = " "; metodo.vencimiento = " "; }
 
 	tarjeta getMetodo() { return metodo; }
 	void setMetodo(tarjeta _metodo) { metodo = _metodo; }
